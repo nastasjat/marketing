@@ -1,0 +1,90 @@
+@import 'main';
+@import 'mixin';
+
+header {
+    height: $header-height;
+
+    @media all and (max-width:825px) {
+        height: 220px;
+    }
+    
+    @media all and (max-width:430px) {
+        height: 210px;
+    }
+}
+
+//first row with logo and menu
+.header_logo_menu
+{
+    @include flex-header();
+
+    @media all and (max-width:825px) {
+        align-items: flex-start;
+    }
+}
+
+.logo-container {
+    width: 298px; 
+    height: 112px;
+    margin-left: 50px;
+    margin-top: 20px;
+
+    img {
+    width: 100%; 
+    height: auto;
+    }
+
+    @media all and (max-width:825px) {
+        margin-left: 30px;
+    }
+}
+
+
+.main-menu
+{
+    @include flex-header();
+    margin-right: 120px;
+    // links in menu
+    a {
+        font-family: $font-family-lora;
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 35px;
+        @include a($white,$red);
+        text-decoration: none;
+    }
+
+    @media all and (max-width:1190px) {
+        margin-right: 80px;
+        a {
+            font-size: 20px;
+        }
+    }
+
+    @media all and (max-width:991px) {
+        margin-right: 50px;
+        gap: 40px;
+        a {
+            font-size: 18px;
+        }
+    }
+
+    @media all and (max-width:825px) {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 30px;
+        gap: 5px;
+        a {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+    }
+
+    @media all and (max-width:430px) {
+        margin-right: 15px;
+        a {
+            font-size: 16px;
+        }
+    }
+}

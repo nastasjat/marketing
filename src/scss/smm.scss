@@ -1,0 +1,361 @@
+@import 'mixin';
+@import 'main';
+
+.smm {
+    @include flex;
+    flex-wrap: wrap;
+
+    .content {
+        width: 50%;
+        padding: 20px;
+        text-align: left;
+
+        @media all and (max-width: 1023px) {
+            width: 100%; 
+        }
+    }
+
+    .button-smm-container {
+        margin-top: 35px;
+        @include flex;
+    }
+
+    // Images container styles
+    .images {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+
+        @media all and (max-width: 1023px) {
+            width: 100%; 
+            margin-top: 0;
+        }
+    }
+
+    // Image styles
+    .images img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .h2-smm {
+        font-size: $h2-font-size;
+        letter-spacing: 3.2px;
+        color: transparent;
+        -webkit-text-stroke: 2px #FFFFFF;
+        line-height: 1.1;
+        margin-left: 50px;
+        margin-top: 50px;
+        text-align: left;
+
+        @media all and (max-width:1200px) {
+            font-size: 56px;
+        }
+
+        @media all and (max-width:860px) {
+            margin-left: 30px;
+        }
+
+        @media all and (max-width:590px) {
+            font-size: 50px;
+            margin-left: 25px;
+        }
+
+        @media all and (max-width:490px) {
+            font-size: 40px;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+    }
+
+    .p-smm {
+        margin-top: 35px;
+        margin-left: 50px;
+        padding-bottom: 5px;
+        font-size: $p-font-size-small;
+        letter-spacing: 1.2px;
+        line-height: 1.3;
+
+        @media all and (max-width:1200px) {
+            font-size: 22px;
+        }
+
+        @media all and (max-width:860px) {
+            margin-left: 30px;
+        }
+
+        @media all and (max-width:590px) {
+            margin-left: 25px;
+        }
+
+        @media all and (max-width:490px) {
+            font-size: 18px;
+            margin-left: 15px;
+        }
+    }
+
+    .button-smm {
+        @include button-smm($orange);
+    }
+}
+
+/* modal for send a request button */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: $black;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 30px;
+  border: 1px solid #888;
+  width: 50%;
+
+  @media all and (max-width:1250px) {
+    width: 80%;
+  }
+  
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: $red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.smm-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+
+    //input fields
+    .styled-input {
+        align-items: center;
+        border: 1px solid $red;
+        border-radius: 81px;
+        width: 600px;
+        height: 70px;
+        margin-bottom: 30px;
+        background-color: transparent;
+        color: $white;
+        font-family: $font-family-lora;
+        font-size: $p-font-size-small;
+        font-weight: medium;
+        padding-left: 40px;
+    }
+
+    .styled-input::placeholder {
+        color: $white;
+    }
+
+    .input-field-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-field-container label {
+        margin-bottom: 10px; 
+        padding-left: 20px;
+        font-size: $p-font-size-small;
+    }
+
+    .button-form {
+        margin-top: 25px; 
+        @include button-smm($red);
+    }
+
+    @media all and (max-width:820px) {
+        .styled-input {
+            width: 500px;
+        }
+    }
+
+    //for calculation form
+    .calc-form-container {
+        width: 625px;
+        text-align: left;
+        margin-bottom: 20px;;
+    }
+
+    .checkbox-container,
+    .radio-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 5px;
+    }
+
+    .checkbox-item,
+    .radio-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-left: 40px;
+    }
+
+    .checkbox-item label,
+    .radio-item label {
+        margin-left: 5px;
+    } 
+}
+
+//business in social media section
+.business {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 110px;
+
+    @media all and (max-width:1100px) {
+        justify-content: center;
+    }
+
+    .rectangle-business {
+        width: 60%;
+        margin-left: 70px;
+        padding-top: 20px;
+        @include rectangles-smm($red);
+        flex-wrap: wrap; 
+
+        &:hover {
+            background-color: transparent;
+            color: $white;
+        }
+
+        @media all and (max-width:1100px) {
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .paragraph-container {
+        width: 40%;
+        text-align: left;
+
+        @media all and (max-width:1100px) {
+            width: 100%;
+        }
+
+    }
+
+    .p-smm {
+        margin-top: 20px;
+        padding-bottom: 0;
+
+        @media all and (max-width:1365px) {
+            margin-top: 0;
+        }
+    }
+
+    .button-red-business {
+        margin-top: 10px;
+        @include button-smm($red);
+        margin-right: 30px;
+
+        @media all and (max-width:1365px) {
+            margin-right: 0;
+        }
+    }
+
+    .button-orange-business {
+        margin-top: 10px;
+        @include button-smm($orange);
+    }
+
+    h3 {
+        font-weight: normal;
+
+        @media all and (max-width:530px) {
+            font-size: 36px;
+        }       
+        
+        @media all and (max-width:490px) {
+            font-size: 32px;
+        }
+    }
+
+    .business-description {
+        height: 850px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 110px;
+
+        ul {
+            width: 45%;
+            text-align: left;
+            margin-top: 40px;
+            margin-left: 90px;
+            list-style:disc;
+            align-self: flex-start;
+
+            li {
+                padding-left: 10px;
+                font-size: $p-font-size;
+                line-height: 1.2;
+                padding-bottom: 40px;
+            }
+        }
+
+        background-image: url('https://i.ibb.co/QC1XN0D/shapes.png');
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: right;
+
+        @media all and (max-width:916px) {
+            height: auto;
+
+            ul {
+                li {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        @media all and (max-width:768px) {
+            ul {
+                width: 80%;
+                margin-left: 20px;
+                align-self: center;
+            }
+        }
+
+        @media all and (max-width:530px) {
+            ul {
+                li {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        @media all and (max-width:490px) {
+            ul {
+                li {
+                    font-size: 22px;
+                }
+            }
+        }
+
+    }
+}

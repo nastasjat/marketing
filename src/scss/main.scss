@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Yeseva+One&display=swap');
+//colors
+$black: #141414;
+$white: #FFFFFF;
+$red: #DB2F2C;
+$orange: #ECA400;
+
+//sizes
+$width: 1512px;
+$header-height: 140px;
+$hero-height: 825px;
+$landing-main-height: 4570px;
+$footer-height: 522px;
+$portfolio-height: 3230px;
+$smm-height: 3776px;
+
+//font-sizes
+$h1-font-size: 96px;
+$h2-font-size: 64px;
+$h3-font-size: 40px;
+$p-font-size-large: 36px;
+$p-font-size-small: 24px;
+$p-font-size: 32px;
+$font-family-yeseva-one: 'Yeseva One', serif;
+$font-family-lora: 'Lora', serif;
+
+$margin: 50px;
+$margin-left: 50px;
+
+html {
+    font-size: $p-font-size;
+    color: $white;
+    background-color: $black;
+}
+
+body {
+    max-width: $width;
+    margin: auto;
+    text-align: center;
+    font-family: $font-family-lora;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-yeseva-one;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    letter-spacing: 4.8px;
+    color: transparent;
+    -webkit-text-stroke: 2px #FFFFFF;
+}
+
+h2 { 
+    font-size: $h2-font-size;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    font-weight: bold;
+}
+
+p {
+  font-size: $p-font-size;
+}
+
+// header {
+//     height: $header-height;
+// }
+
+// .hero {
+//     height: $hero-height;
+// }
+
+// .landing {
+//     height: $landing-main-height;
+// }
+
+// footer {
+//     height: $footer-height;
+// }
+
+// .portfolio {
+//     height: $portfolio-height;
+// }
+
+// .smm {
+//     height: $smm-height;
+// }

@@ -1,0 +1,61 @@
+doctype html
+html(lang="ua")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Webpack
+    body 
+        include banner.pug 
+        main.landing 
+            article.services#services 
+                h1 ПОСЛУГИ
+                div.services-rectangles
+                    .rectangle-red
+                        h2 SMM
+                        // right arrow
+                        a.button-orange(href="smm.html") Детальніше &#8594 
+                    .rectangle-orange
+                        h2 БРЕНДИНГ
+                        button.button-red Детальніше &#8594 
+                    .rectangle-orange
+                        h2 РЕКЛАМА
+                        button.button-red Детальніше &#8594 
+                    .rectangle-red
+                        h2 СТРАТЕГІЯ
+                        button.button-orange Детальніше &#8594 
+            article.portfolio
+                .portfolio-heading
+                    h1 ПОРТФОЛІО
+                div.portfolio-section
+                    div.potfolio-img-container
+                        img(src=require('.//img/integral.jpg') alt="integral").first-column
+                        p.p-heading Integral - фітнес-студія
+                        p.p-subheading брендинг, SMM просування
+                    div.potfolio-img-container
+                        img(src=require('.//img/show4me.png') alt="show4me").second-column
+                        p.p-heading Show4me - музична мережа
+                        p.p-subheading реклама, SMM просування,<br> аудит бізнесу
+                    div.potfolio-img-container
+                        img(src=require('.//img/unico.png') alt="unico").first-column
+                        p.p-heading Unico - бренд косметики
+                        p.p-subheading брендинг, SMM просування,<br> маркетингова стратегія
+                    div.potfolio-img-container
+                        img(src=require('.//img/poetryhome.png') alt="poetryhome").second-column
+                        p.p-heading Poetry Home - аромати для<br> дому
+                        p.p-subheading SMM просування, реклама
+                    div.button-container
+                        a.button-services(href="portfolio.html") Показати всі &#8594 
+            article.form#form
+                h2 Замовити безкоштовну консультацію
+                 form.my-form
+                    input(type="text", placeholder="Ім'я*", class="styled-input")
+                    input(type="tel", placeholder="Номер телефону*", class="styled-input")
+                    input(type="email", placeholder="e-mail", class="styled-input")
+                    select(class="styled-input", id='dropDown')
+                        option(value="") Оберіть послугу
+                        option(value="service1") SMM
+                        option(value="service2") Брендинг
+                        option(value="service3") Реклама
+                        option(value="service4") Стратегія
+                    button.button-form Відправити
+        include footer.pug

@@ -1,0 +1,78 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Portfolio
+    body
+        include header.pug 
+        article.portfolio-page
+            h2.h2-portfolio Наші кейси
+            .filters
+                button.filters Всі
+                button.filters Реклама
+                button.filters SMM 
+                button.filters Брендинг
+                button.filters Стратегія
+            div.cases-section
+                div.case-img-container(data-categories='["брендинг", "smm"]')
+                    a(href='https://www.integral.fit/eng/')
+                        img(src=require('.//img/integral.jpg') alt="integral")
+                    p.p-heading Integral - фітнес-студія
+                    p.p-subheading брендинг, SMM просування
+                div.case-img-container(data-categories='["брендинг", "smm", "стратегія"]')
+                    a(href='https://unicoukraine.com/')
+                        img(src=require('.//img/unico.png') alt="unico")
+                    p.p-heading Unico - бренд косметики
+                    p.p-subheading брендинг, SMM просування, маркетингова стратегія
+                div.case-img-container(data-categories='["реклама", "smm", "стратегія"]')
+                    a(href='https://show4me.com/')
+                        img(src=require('.//img/show4me.png') alt="show4me")
+                    p.p-heading Show4me - музична мережа
+                    p.p-subheading реклама, SMM просування, аудит бізнесу
+                div.case-img-container(data-categories='["реклама", "smm"]')
+                    a(href='https://poetryhome.ua/')
+                        img(src=require('.//img/poetryhome.png') alt="poetryhome")
+                    p.p-heading Poetry Home - аромати для дому
+                    p.p-subheading SMM просування, реклама
+                div.case-img-container(data-categories='["реклама"]')
+                    a(href='https://esperbionics.com/')
+                        img(src=require('.//img/esper.png') alt="esperbionics")
+                    p.p-heading Esper Bionics - біонічні протези
+                    p.p-subheading реклама
+                div.case-img-container(data-categories='["брендинг", "стратегія"]')
+                    a(href='https://ochis.ua/')
+                        img(src=require('.//img/ochis.png') alt="ochis")
+                    p.p-heading Ochis - екологічні окуляри з кави
+                    p.p-subheading брендинг, маркетингова стратегія
+                div.case-img-container(data-categories='["брендинг", "реклама", "стратегія"]')
+                    a(href='https://lemon.io/')
+                        img(src=require('.//img/lemon.png') alt="ochis")
+                    p.p-heading Lemon.io - платформа розробників
+                    p.p-subheading брендинг, реклама, аудит бізнесу
+                div.case-img-container(data-categories='["брендинг", "smm"]')
+                    a(href='https://promova.com/uk')
+                        img(src=require('.//img/promova.png') alt="promova")
+                    p.p-heading Promova - вивчення іноземних мов
+                    p.p-subheading брендинг, SMM просування
+                div.case-img-container(data-categories='["стратегія", "реклама"]')
+                    a(href='https://le-qb.com/')
+                        img(src=require('.//img/leqb.png') alt="leqb")
+                    p.p-heading LeQB - студія архітектури і дизайну
+                    p.p-subheading маркетингова стратегія, реклама
+                div.case-img-container(data-categories='["реклама", "стратегія"]')
+                    a(href='https://brua.com.ua/')
+                        img(src=require('.//img/brua.png') alt="brua")
+                    p.p-heading Brua - бренд ювелірних виробів
+                    p.p-subheading реклама, аудит бізнесу
+                div.case-img-container(data-categories='["брендинг", "стратегія", "реклама"]')
+                    a(href='https://www.frisson.co/')
+                        img(src=require('.//img/frisson.png') alt="frisson")
+                    p.p-heading Frisson - сучасні пазли з художниками 
+                    p.p-subheading брендинг, маркетингова стратегія, реклама
+                div.case-img-container(data-categories='["реклама", "стратегія", "smm"]')
+                    a(href='https://requiet.ua/en/')
+                        img(src=require('.//img/quiet.png') alt="quiet")
+                    p.p-heading Re:Quiet - настінні акустичні композиції
+                    p.p-subheading реклама, аудит бізнесу, SMM просування
+        include footer.pug

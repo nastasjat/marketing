@@ -1,0 +1,102 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title SMM
+    body 
+        include header.pug 
+        main.smm 
+            .content
+                h2.h2-smm SMM. Просування в соцмережах
+                p.p-smm SMM - ефективний інструмент для формування лояльної аудиторії та прямого спілкування з клієнтами в соціальних мережах. 
+                p.p-smm Ми розробляємо індивідуальні SMM-стратегії для посилення присутності бренду, охоплення цільової аудиторії, збільшення трафіку та конверсії через високоякісний контент, таргетовану рекламу, співпрацю з лідерами думок та активність в соціальних медіа.
+                .button-smm-container
+                    button.button-smm Відправити заявку
+            .images
+                img(src=require(".//img/likes.gif") alt="gif")
+                img(src=require(".//img/icons.png") alt="social media icons")
+            article.business 
+                .rectangle-business
+                    h4 Бізнес у соцмережах
+                    button.button-red-business Замовити
+                    button.button-orange-business Розрахувати вартість
+                .paragraph-container
+                    p.p-smm  Один з найшвидших способів вивести бізнес в онлайн - створити сторінки у соціальних мережах. 
+                    p.p-smm  Facebook популярніший серед українців середнього віку, Instagram - серед молодших користувачів. Підказуємо, що буде трендовим серед Gen Z у TikTok.
+                .business-description
+                    h3 Що входить в послугу?
+                    ul
+                        li Дослідження цільової аудиторії та конкурентів
+                        li Розробка контент-стратегії (види контенту, тематики, календар)
+                        li Створення унікального візуального стилю бренду
+                        li Регулярне наповнення акаунтів цікавим контентом
+                        li Налагодження комунікації з аудиторією (відповіді, прямі ефіри)
+                        li Аналіз ефективності та коригування стратегії
+
+
+        // Modal container for a request form
+        #requestForm.modal
+            .modal-content
+                span.close &times;
+                form.smm-form
+                    input(type="text", placeholder="ПІП*", class="styled-input")
+                    input(type="tel", placeholder="Номер телефону*", class="styled-input")
+                    input(type="email", placeholder="e-mail", class="styled-input")
+                    .input-field-container
+                        label У якій сфері Ваш бізнес?
+                        input(type="business", placeholder="", class="styled-input")
+                    .input-field-container
+                        label Посилання на сторінки в соцмережах
+                        input(type="socials", placeholder="", class="styled-input")
+                    .input-field-container
+                        label Яка Ваша основна задача зараз?
+                        input(type="goal", placeholder="", class="styled-input")
+                    button.button-form Зв'язатися з нами
+
+        //form calculating the price
+        #calculateForm.modal
+            .modal-content
+                span.close &times;
+                form.smm-form
+                    .input-field-container.calc-form-container
+                        label Які соціальні мережі ви хочете просувати?
+                        .checkbox-container
+                            .checkbox-item
+                                input(type="checkbox", id="tiktok", name="socials", value="TikTok")
+                                label(for="tiktok") TikTok
+                            .checkbox-item
+                                input(type="checkbox", id="instagram", name="socials", value="Instagram")
+                                label(for="instagram") Instagram
+                            .checkbox-item
+                                input(type="checkbox", id="facebook", name="socials", value="Facebook")
+                                label(for="facebook") Facebook
+                    .input-field-container.calc-form-container
+                        label Яку к-сть постів ви плануєте публікувати щотижня?
+                        input(type="number", placeholder="Введіть кількість", class="styled-input post-count", min="1", step="1")
+                    .input-field-container.calc-form-container
+                        label Тривалість просування
+                        .radio-container
+                            .radio-item
+                                input(type="radio", id="duration3", name="duration", value="3")
+                                label(for="duration3") 3 місяці
+                            .radio-item
+                                input(type="radio", id="duration6", name="duration", value="6")
+                                label(for="duration6") 6 місяців
+                            .radio-item
+                                input(type="radio", id="duration12", name="duration", value="12")
+                                label(for="duration12") 1 рік
+                    .input-field-container.calc-form-container
+                        label Чи потрібно створення візуального контенту (тексти, графіка, відео)?
+                        .radio-container
+                            .radio-item
+                                input(type="radio", id="contentYes", name="content", value="yes")
+                                label(for="contentYes") Так
+                            .radio-item
+                                input(type="radio", id="contentNo", name="content", value="no")
+                                label(for="contentNo") Ні
+                    p Ціна: $
+                        span#price 0
+                    button.button-form Замовити
+
+        include footer.pug
